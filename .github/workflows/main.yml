@@ -9,4 +9,4 @@ jobs:
       uses: actions/checkout@v4
     - name: Info 
       run: |
-        echo "running manual tasks
+        echo "running manual tasks"
