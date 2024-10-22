@@ -14,4 +14,4 @@ jobs:
       uses: actions/checkout@v4
     - name: Run manual task
       run: |
-        echo "running manual tasks with parm1: ${{ github.event.param1 }}"
+        echo "running manual tasks with parm1: ${{ github.event.inputs.param1 }}"
