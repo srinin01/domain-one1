@@ -1,14 +1,17 @@
 name: Manual Workflow
 on:
-  issues:
-    types:
-      - opened
+  workflow_dispatch:
+    inputs:
+      param1: 
+        description:  "desc for parm1"
+        required: true
+        default: "Hello World"
 jobs:
   run-manual-tasks:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-    - name: Info 
+    - name: Run manual task
       run: |
-        echo "running manual tasks"
+        echo "running manual tasks with parm1: ${{ github.event.param1 }}"
